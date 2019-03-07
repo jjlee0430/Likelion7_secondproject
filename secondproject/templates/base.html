@@ -24,10 +24,10 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-item nav-link" href="{% url 'blog' %}">Blog</span></a>
+                        <a class="nav-item nav-link" href="{% url 'blog' %}">블로그</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                        <a class="nav-item nav-link" href="{% url 'portfolio' %}">포트폴리오</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-item nav-link" href="{% static 'why.jpeg' %}">수료증</a>
@@ -38,7 +38,7 @@
                             aria-haspopup="true" aria-expanded="false">환영합니다. {{ user.username }} 님!</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'new' %}">글쓰기</a>
-                            <a class="dropdown-item" href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+                            <a class="dropdown-item" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
 <form id="logout" method="POST" action="{% url 'logout' %}">
 	{% csrf_token %} <input type="hidden" />
 </form>
@@ -46,10 +46,10 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-item nav-link" href="{% url 'signup' %}">Signup</a>
+                        <a class="nav-item nav-link" href="{% url 'signup' %}">회원가입</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                        <a class="nav-item nav-link" href="{% url 'login' %}">로그인</a>
                     </li>
                     {% endif %}
                 </ul>
